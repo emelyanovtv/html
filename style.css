@@ -56,10 +56,11 @@ body{
 }
 
 .b-table .b-head__rowcustom{
-    position: relative;
-    left: 44%;
+    float: left;
+    /* left: 44%; */
     display: inline;
-    color:#fff;
+    color: #fff;
+    margin-left: 44%;
 }
 .b-table .b-head__rowcustom .b-filter{  padding: 10px 0 10px 0;}
 .b-table .b-head__rowcustom .b-filter div{float: left;}

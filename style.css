@@ -244,7 +244,7 @@ input[name="out"]:not(:checked) + input[name="in"]:checked ~ .b-page .b-table .b
     .b-body__text__hide_900, .b-body__text__hide_800,.b-body__text__hide_700{display:none;}
 }
 
-@media only screen and (min-width:501px) and (max-width:600px){
+@media only screen and (min-width:0px) and (max-width:600px){
     .b-body__text__hide_900, .b-body__text__hide_800,.b-body__text__hide_700,.b-body__text__hide_600{display:none;}
 }
 

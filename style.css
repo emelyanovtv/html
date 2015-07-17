@@ -72,13 +72,16 @@ body{
     -webkit-box-shadow: -1px -12px 15px -6px rgba(0,0,0,0.26);
     -moz-box-shadow: -1px -12px 15px -6px rgba(0,0,0,0.26);
     box-shadow: -1px -12px 15px -6px rgba(0,0,0,0.26);
+
+    float: left;
+    width: 100%;
 }
 .b-table .b-body__row, .b-table .b-head__row
 {
      display:table-row;
     color: #000000;
     text-decoration: none;
-    float: left;
+ 
 }
 .b-table .b-table__cell{
     display:table-cell;

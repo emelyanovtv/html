@@ -42,7 +42,6 @@ body{
 .b-table .b-body
 {
     position: relative;
-    top: 89px;
     display: table-row-group;
     background: linear-gradient(
         to bottom,
@@ -81,7 +80,7 @@ body{
      display:table-row;
     color: #000000;
     text-decoration: none;
- 
+
 }
 .b-table .b-table__cell{
     display:table-cell;

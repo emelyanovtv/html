@@ -43,16 +43,6 @@ body{
 {
     position: relative;
     display: table-row-group;
-    background: linear-gradient(
-        to bottom,
-        #fff,
-        #fff 50%,
-        #E6E6E6 50%,
-        #E6E6E6
-    );
-    /* The rectangle in which to repeat.
-       It can be fully wide in this case */
-    background-size: 100% 224px;
 }
 
 .b-table .b-head__rowcustom{
@@ -73,18 +63,23 @@ body{
     float: left;
     width: 100%;
 }
+
+
 .b-table .b-body__row, .b-table .b-head__row
 {
      display:table-row;
     color: #000000;
     text-decoration: none;
 
+
 }
 .b-table .b-table__cell{
     display:table-cell;
     text-align: center;
     vertical-align: middle;
+
 }
+
 .b-table .b-head__separator
 {
     position: absolute;
@@ -95,14 +90,14 @@ body{
 }
 .b-table .b-head .b-table__cell{text-align: center; color: #fff; padding-top: 8px;}
 .b-table .b-body .b-table__cell{border: 1px solid #cccccc;height: 110px}
-.b-table .b-body__row:hover {
-    background-color: #ffa;
+.b-page .b-table .b-body__row:hover {
+    background-color: #ffa !important;
 }
 
 .b-table .b-body__row .b-table__cell, .b-table .b-head__row .b-table__cell {
     position: relative;
 }
-.b-table .b-body__row .b-table__cell:hover::after {
+.b-page .b-table .b-body__row .b-table__cell:hover::after {
     content: "";
     position: absolute;
     background-color: #ffa !important;
@@ -220,14 +215,7 @@ input[name="out"]:checked ~ .b-page .b-filter__out .b-filter__label, input[name=
     background:url(http://farm6.static.flickr.com/5182/5840005274_b3bcc52bb1_o.png) no-repeat;
 }
 
-input[name="out"]:checked  + input[name="in"]:not(:checked) ~ .b-page .b-table .b-body .departure-in{
-    display: none;
-}
 
-
-input[name="out"]:not(:checked) + input[name="in"]:checked ~ .b-page .b-table .b-body .departure-out{
-    display: none;
-}
 
 @media only screen and (min-width:801px) and (max-width:900px){
     .b-body__text__hide_900{display:none;}
@@ -245,5 +233,41 @@ input[name="out"]:not(:checked) + input[name="in"]:checked ~ .b-page .b-table .b
 @media only screen and (min-width:0px) and (max-width:600px){
     .b-body__text__hide_900, .b-body__text__hide_800,.b-body__text__hide_700,.b-body__text__hide_600{display:none;}
 }
+
+
+input[name="out"]:not(:checked) + input[name="in"]:not(:checked) ~ .b-page .b-table .b-body__row:nth-of-type(odd),
+input[name="out"]:checked + input[name="in"]:checked ~ .b-page .b-table .b-body__row:nth-of-type(odd){
+    background: #c5c5c5;
+}
+
+
+input[name="out"]:checked + input[name="in"]:not(:checked) ~ .b-page .b-table a.departure-out:nth-of-type(odd) + a.departure-out:nth-of-type(even),
+input[name="out"]:checked + input[name="in"]:not(:checked) ~ .b-page .b-table a.departure-out:first-child{
+    background: #c5c5c5;
+}
+/*
+Костыль((
+*/
+input[name="out"]:not(:checked) + input[name="in"]:checked ~ .b-page .b-table a.departure-in:nth-of-type(odd) + a.departure-in:nth-of-type(even),
+input[name="out"]:not(:checked) + input[name="in"]:checked ~ .b-page .b-table a.departure-in:first-child{
+    background: #c5c5c5;
+}
+input[name="out"]:not(:checked) + input[name="in"]:checked ~ .b-page a.departure-in:nth-child(2) {
+    background: #c5c5c5;
+}
+
+input[name="out"]:not(:checked) + input[name="in"]:checked ~ .b-page a.departure-in:nth-of-type(3n-2) {
+    background: #c5c5c5;
+}
+
+input[name="out"]:checked  + input[name="in"]:not(:checked) ~ .b-page .b-table .b-body .departure-in{
+    display: none ;
+}
+
+
+input[name="out"]:not(:checked) + input[name="in"]:checked ~ .b-page .b-table .b-body .departure-out{
+    display: none;
+}
+
 
 
